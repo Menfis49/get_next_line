@@ -6,13 +6,15 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 10:24:20 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/18 11:32:00 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/18 12:08:25 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
+# include <stdio.h>
+# include <fcntl.h>
 # include <stdlib.h>
 # include <sys/types.h>
 # include <sys/uio.h>
