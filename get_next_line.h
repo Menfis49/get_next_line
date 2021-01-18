@@ -6,7 +6,7 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 10:24:20 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/18 10:54:20 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/18 11:32:00 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define GET_NEXT_LINE_H
 
 # include <stdlib.h>
-# include <fcntl.h>
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <unistd.h>

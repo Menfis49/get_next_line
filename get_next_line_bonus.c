@@ -6,13 +6,43 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 10:24:33 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/18 10:57:26 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/18 11:29:47 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-void	ft_isolator(char **stock, char **line)
+static void	ft_fill(char *dst, char const *s, int *i)
+{
+	int		j;
+
+	j = 0;
+	while (s[j])
+	{
+		dst[*i] = s[j];
+		j++;
+		(*i)++;
+	}
+}
+
+char		*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*dst;
+	int		i;
+
+	if (!s1 || !s2)
+		return (NULL);
+	dst = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!dst)
+		return (NULL);
+	i = 0;
+	ft_fill(dst, s1, &i);
+	ft_fill(dst, s2, &i);
+	dst[i] = '\0';
+	return (dst);
+}
+
+void		ft_isolator(char **stock, char **line)
 {
 	char	*tmp;
 	size_t	i;
@@ -35,7 +65,7 @@ void	ft_isolator(char **stock, char **line)
 	}
 }
 
-int		ft_fork(char **stock, char **line, size_t by)
+int			ft_fork(char **stock, char **line, size_t by)
 {
 	if (by < 0)
 	{
@@ -62,7 +92,7 @@ int		ft_fork(char **stock, char **line, size_t by)
 	}
 }
 
-int		get_next_line(int fd, char **line)
+int			get_next_line(int fd, char **line)
 {
 	size_t		by;
 	char		buff[BUFFER_SIZE + 1];
