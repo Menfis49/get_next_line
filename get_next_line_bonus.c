@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 10:24:07 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/18 10:57:13 by vazra            ###   ########.fr       */
+/*   Created: 2021/01/18 10:24:33 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/18 10:57:26 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	ft_isolator(char **stock, char **line)
 {
@@ -88,5 +88,5 @@ int		get_next_line(int fd, char **line)
 			break ;
 		by = read(fd, buff, BUFFER_SIZE);
 	}
-	return (ft_fork(&(stock[fd]), line, by));
+	return (ft_fork(&stock[fd], line, by));
 }

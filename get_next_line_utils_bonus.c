@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/18 10:24:53 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/18 10:54:45 by vazra            ###   ########.fr       */
+/*   Created: 2021/01/18 10:25:03 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/18 10:55:13 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char		*ft_strdup(const char *s1)
 {
-	int		len;
-	int		i;
-	char	*s2;
+	int				len;
+	int				i;
+	char			*s2;
 
 	i = 0;
 	len = ft_strlen(s1);
@@ -34,7 +34,7 @@ char		*ft_strdup(const char *s1)
 
 size_t		ft_strlen(const char *s)
 {
-	size_t	i;
+	size_t			i;
 
 	i = 0;
 	while (s[i])
@@ -44,7 +44,7 @@ size_t		ft_strlen(const char *s)
 
 char		*ft_strchr(const char *s, int c)
 {
-	char	*ptr;
+	char			*ptr;
 
 	ptr = (char *)s;
 	while (*ptr != c)
@@ -84,7 +84,7 @@ char		*ft_substr(char const *s, unsigned int start, size_t len)
 
 static void	ft_fill(char *dst, char const *s, int *i)
 {
-	int	j;
+	int			j;
 
 	j = 0;
 	while (s[j])
@@ -97,8 +97,8 @@ static void	ft_fill(char *dst, char const *s, int *i)
 
 char		*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*dst;
-	int		i;
+	char		*dst;
+	int			i;
 
 	if (!s1 || !s2)
 		return (NULL);
